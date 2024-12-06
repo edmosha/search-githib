@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 
 import { observer } from 'mobx-react-lite';
 
+import { CopyLinkButton } from '@/features/repositories/copy-link';
 import { ToggleFavoriteButton } from '@/features/repositories/toggle-favorite';
 
 import { Repository, RepositoryCard } from '@/entities/repository';
 
 import { repositoriesService } from '@/shared/api';
-import { LinkIcon } from '@/shared/assets';
-import { IconButton, LoadingWrapper } from '@/shared/ui';
+import { LoadingWrapper } from '@/shared/ui';
 
 import { repositoryListStore } from '../model/repository-list-store.ts';
 import { RepositoryListHeader } from './repository-list-header.tsx';
@@ -58,9 +58,7 @@ export const RepositoryList = observer(() => {
                   actions={
                     <>
                       <ToggleFavoriteButton repository={repository} />
-                      <IconButton>
-                        <LinkIcon />
-                      </IconButton>
+                      <CopyLinkButton url={repository.html_url} />
                     </>
                   }
                 />
