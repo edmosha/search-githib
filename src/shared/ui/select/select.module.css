@@ -1,0 +1,21 @@
+.select {
+    min-width: 286px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+
+    font-size: var(--font-size-body);
+    line-height: 16px;
+    color: var(--dark-grey);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: top 50% right 20px ;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/down.svg');
+}
+
+.select:focus {
+    outline: none;
+}

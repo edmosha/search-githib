@@ -1,0 +1,11 @@
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--font-size-body2);
+    line-height: 14px;
+}
+
+.backButton:hover {
+    opacity: 0.6;
+}

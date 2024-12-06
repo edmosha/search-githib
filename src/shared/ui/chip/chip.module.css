@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    height: 24px;
+    padding: 4px 8px;
+    background-color: var(--light-grey-2);
+    gap: 4px;
+    border-radius: 12px;
+
+    font-size: var(--font-size-caption-2);
+    line-height: 14px
+}

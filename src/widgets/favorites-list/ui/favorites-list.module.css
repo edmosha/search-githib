@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+}
+
+.scrollContainer {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    margin: 24px 0;
+}
+
+.listContainer {
+    flex: 1;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+}
+
+@media screen and (min-width: 1061px) and (max-width: 1440px)  {
+    .listContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1060px) {
+    .listContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and  (max-width: 768px) {
+    .listContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+}
