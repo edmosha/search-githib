@@ -7,6 +7,7 @@ import DownIcon from './down.svg?react';
 import FolderIcon from './folder.svg?react';
 import HeartRedIcon from './heart-red.svg?react';
 import HeartIcon from './heart.svg?react';
+import LinkBlueIcon from './link-blue.svg?react';
 import LinkIcon from './link.svg?react';
 import Logo from './logo.svg?react';
 import StarIcon from './star.svg?react';
@@ -26,4 +27,5 @@ export {
   CreateIcon,
   FolderIcon,
   TerminalIcon,
+  LinkBlueIcon,
 };

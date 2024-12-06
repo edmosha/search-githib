@@ -78,7 +78,7 @@ export const RepositoryProfile = ({ repository }: RepositoryProfileProps) => {
       <div className={styles.footer}>
         <div className={styles.actions}>
           <ToggleFavoriteButton repository={repository} />
-          <CopyLinkButton />
+          <CopyLinkButton url={repository.html_url} />
         </div>
 
         <Button component={'a'} href={repository.html_url} target={'_blank'}>

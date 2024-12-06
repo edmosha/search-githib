@@ -21,7 +21,7 @@ export const FavoritesList = observer(() => {
               repository={repository}
               actions={
                 <>
-                  <CopyLinkButton />
+                  <CopyLinkButton url={repository.html_url} />
                   <ToggleFavoriteButton repository={repository} />
                 </>
               }
