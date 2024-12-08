@@ -7,7 +7,6 @@
 
 .scrollContainer {
     display: flex;
-    flex: 1;
     min-height: 0;
     overflow-y: auto;
     margin: 24px 0;

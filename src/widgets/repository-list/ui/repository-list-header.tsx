@@ -1,6 +1,7 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 
 import { observer } from 'mobx-react-lite';
+import { useSearchParams } from 'react-router-dom';
 
 import { RepositoryListSortValues } from '@/widgets/repository-list/types.ts';
 
@@ -34,11 +35,13 @@ const sortOptions = [
 
 export const RepositoryListHeader = observer(
   ({ totalCount }: RepositoryListHeaderProps) => {
-    const [query, setQuery] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [query, setQuery] = useState(searchParams.get('query') || '');
 
     useEffect(() => {
       const timer = setTimeout(() => {
         repositoryListStore.setSearchQuery(query);
+        setSearchParams(query ? { query } : {});
       }, 500);
 
       return () => clearTimeout(timer);
@@ -52,6 +55,7 @@ export const RepositoryListHeader = observer(
       <div className={styles.headerContainer}>
         <Input
           placeholder={'Search'}
+          value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
 
